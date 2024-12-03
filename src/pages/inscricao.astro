@@ -1,0 +1,207 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+// Import a custom background image for this page (if necessary)
+import backgroundImage from "assets/Home_bg.png";
+---
+
+<Layout title="Inscrições Gerais - XVII Festival Kawasuji de Taiko">
+  <div
+    class="min-h-screen flex flex-col"
+    style={`background-image: url(${backgroundImage}); background-position: center; background-size: contain; background-repeat: no-repeat; background-attachment: scroll; background-color: #e3dcb6;`}>
+    <!-- Header Section -->
+    <header class="text-center py-8">
+      <h1 class="text-4xl font-bold text-[#101a61]">INSCRIÇÕES GERAIS</h1>
+      <h2 class="text-2xl font-bold text-[#101a61] mt-2">
+        XVII FESTIVAL KAWASUJI DE TAIKO
+      </h2>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 px-4 py-8 max-w-4xl mx-auto">
+      <section class="text-center mb-8">
+        <p class="text-lg text-slate-700">
+          Depois de muita espera, estão finalmente abertas as inscrições gerais
+          para o 17º Festival Kawasuji de Taiko!
+        </p>
+        <ol class="text-left mt-6 space-y-4 list-decimal list-inside">
+          <li>
+            Nesta página, você irá preencher informações relevantes para a
+            participação do seu grupo, como:
+            <ul class="list-disc list-inside pl-6">
+              <li>UF da cidade do grupo;</li>
+              <li>
+                Quantidade de pessoas (crianças, adultos e acompanhantes) para o
+                cálculo da alimentação;
+              </li>
+              <li>
+                Quantidade total de pessoas (crianças, adultos e acompanhantes)
+                para o cálculo da pernoite.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Em seguida, a página irá te direcionar para um Formulário Google -
+            onde os campos estarão pré-preenchidos com as informações
+            fornecidas.
+          </li>
+          <li>
+            Finalize o preenchimento dos campos restantes e envie o formulário.
+          </li>
+          <li>
+            Siga o Instagram Oficial:{" "}
+            <a
+              href="https://instagram.com/festivalkawasuji"
+              target="_blank"
+              class="text-blue-500 underline">@festivalkawasuji</a
+            >
+          </li>
+          <li>
+            Em caso de dúvidas, entre em contato:
+            <ul class="list-disc list-inside pl-6">
+              <li>
+                E-mail:{" "}
+                <a
+                  href="mailto:festival.kawasuji@gmail.com"
+                  class="text-blue-500 underline">festival.kawasuji@gmail.com</a
+                >
+              </li>
+              <li>WhatsApp: +55 (19) 9 9664-6622</li>
+            </ul>
+          </li>
+        </ol>
+        <button
+          class="bg-[#9e0101] text-white py-2 px-6 rounded-full mt-6 hover:bg-[#530101]"
+          onclick="document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' })">
+          Prosseguir
+        </button>
+      </section>
+
+      <!-- Calculator Section -->
+      <section id="calculator" class="bg-[#b8b394] p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-[#101a61] text-center">
+          Calculadora de Custos do Evento
+        </h2>
+        <div class="mt-4 space-y-4">
+          <div>
+            <label for="uf" class="block text-lg text-slate-700"
+              >UF da cidade do grupo:</label
+            >
+            <select id="uf" class="w-full p-2 border rounded-md text-slate-600">
+              <option value="">Selecione</option>
+              <option>AC</option>
+              <option>AL</option>
+              <option>AP</option>
+              <option>AM</option>
+              <option>BA</option>
+              <option>CE</option>
+              <option>DF</option>
+              <option>ES</option>
+              <option>GO</option>
+              <option>MA</option>
+              <option>MT</option>
+              <option>MS</option>
+              <option>MG</option>
+              <option>PA</option>
+              <option>PB</option>
+              <option>PR</option>
+              <option>PE</option>
+              <option>PI</option>
+              <option>RJ</option>
+              <option>RN</option>
+              <option>RS</option>
+              <option>RO</option>
+              <option>RR</option>
+              <option>SC</option>
+              <option>SP</option>
+              <option>SE</option>
+              <option>TO</option>
+            </select>
+          </div>
+          <div>
+            <label for="qtd-adults" class="block text-lg text-slate-700"
+              >Quantidade de adultos - acima de 12 anos (alimentação):</label
+            >
+            <input
+              type="number"
+              id="qtd-adults"
+              class="w-full p-2 border rounded-md"
+            />
+          </div>
+          <div>
+            <label for="qtd-children" class="block text-lg text-slate-700"
+              >Quantidade de crianças - 12 anos ou menos (alimentação):</label
+            >
+            <input
+              type="number"
+              id="qtd-children"
+              class="w-full p-2 border rounded-md"
+            />
+          </div>
+          <div>
+            <label for="qtd-total" class="block text-lg text-slate-700"
+              >Quantidade de adultos + crianças (pernoite):</label
+            >
+            <input
+              type="number"
+              id="qtd-total"
+              class="w-full p-2 border rounded-md"
+            />
+          </div>
+        </div>
+        <button
+          class="bg-[#2641c6ff] text-white py-2 px-6 rounded-full mt-6 hover:bg-[#101a61ff]"
+          onclick="calculateTotalCost()">
+          Calcular Total
+        </button>
+        <div class="mt-6 text-center">
+          <p id="result" class="text-2xl font-bold text-[#2641c6ff]"></p>
+          <a
+            id="form-link"
+            href="#"
+            class="hidden bg-[#2641c6ff] text-white py-2 px-6 rounded-full mt-6 hover:bg-[#101a61ff]"
+            target="_blank">
+            Ir para Formulário
+          </a>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script>
+    function calculateTotalCost(): void {
+      const ufElement = document.getElementById("uf") as HTMLSelectElement;
+      const qtdAdultsElement = document.getElementById("qtd-adults") as HTMLInputElement;
+      const qtdChildrenElement = document.getElementById("qtd-children") as HTMLInputElement;
+      const qtdTotalElement = document.getElementById("qtd-total") as HTMLInputElement;
+      const formLink = document.getElementById("form-link") as HTMLAnchorElement;
+
+      const uf = ufElement?.value || "";
+      const qtdAdults = parseInt(qtdAdultsElement?.value) || 0;
+      const qtdChildren = parseInt(qtdChildrenElement?.value) || 0;
+      const qtdTotal = parseInt(qtdTotalElement?.value) || 0;
+
+      const baseCost = uf === "SP" ? 1000 : 750;
+      const foodAdultCost = 192;
+      const foodChildCost = 123;
+      const lodgingCost = 30;
+
+      const total =
+        baseCost +
+        qtdAdults * foodAdultCost +
+        qtdChildren * foodChildCost +
+        qtdTotal * lodgingCost;
+
+      const resultElement = document.getElementById("result");
+      if (resultElement) {
+        resultElement.innerText = `Valor Total: R$ ${total}`;
+      }
+
+      if (formLink) {
+        formLink.href = `https://docs.google.com/forms/d/...?uf=${uf}&adults=${qtdAdults}&children=${qtdChildren}&total=${qtdTotal}`;
+        formLink.classList.remove("hidden");
+      }
+    }
+  </script>
+</Layout>
