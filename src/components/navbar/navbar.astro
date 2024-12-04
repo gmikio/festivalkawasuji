@@ -6,14 +6,10 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
     {
-      title: "Homepage",
-      path: "/sobre",
-    },  
-    {
     title: "Sobre o evento",
     path: "#",
     children: [
-      { title: "O que é o Festival Kawasuji?", path: "/about-kawasuji" },
+      { title: "O que é o Festival Kawasuji?", path: "/about/kawasuji" },
       { title: "Quem é Ryuu Taiko?", path: "/about-ryuu" },
       { title: "Quem é Yashika Daiko?", path: "/about-yashika" },
       { title: "Cronograma e Logística", path: "/404" },
@@ -25,7 +21,7 @@ const menuitems = [
   },
   {
     title: "Publicações e avisos",
-    path: "/blog",
+    path: "/avisos",
   },
   {
     title: "Contato",
