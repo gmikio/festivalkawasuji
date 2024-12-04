@@ -5,26 +5,26 @@ import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
-  {
-    title: "Ações",
+    {
+      title: "Homepage",
+      path: "/sobre",
+    },  
+    {
+    title: "Sobre o evento",
     path: "#",
     children: [
-      { title: "Inscrição", path: "/inscricao" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
+      { title: "O que é o Festival Kawasuji?", path: "/about-kawasuji" },
+      { title: "Quem é Ryuu Taiko?", path: "/about-ryuu" },
+      { title: "Quem é Yashika Daiko?", path: "/about-yashika" },
+      { title: "Cronograma e Logística", path: "/404" },
     ],
   },
   {
-    title: "Sobre o evento",
-    path: "/sobre",
+    title: "Inscrições",
+    path: "/inscricao",
   },
   {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Anúncios",
+    title: "Publicações e avisos",
     path: "/anuncios",
   },
   {
