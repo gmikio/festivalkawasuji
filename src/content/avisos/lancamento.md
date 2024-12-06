@@ -6,7 +6,7 @@ image: {
     src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "browsing social media"
 }
-publishDate: "2021-12-05 22:26"
+publishDate: "2024-12-05 22:26"
 category: "Publicações"
 author: "Ryu Nakamura"
 tags: [instagram, avisos]
