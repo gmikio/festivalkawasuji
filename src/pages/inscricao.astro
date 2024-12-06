@@ -1,24 +1,19 @@
 ---
 import Layout from "@layouts/Layout.astro";
-
-// Import a custom background image for this page (if necessary)
-import backgroundImage from "assets/Home_bg.png";
 ---
 
 <Layout title="Inscrições Gerais - XVII Festival Kawasuji de Taiko">
-  <div
-    class="min-h-screen flex flex-col"
-    style={`background-image: url(${backgroundImage}); background-position: center; background-size: contain; background-repeat: no-repeat; background-attachment: scroll; background-color: #e3dcb6;`}>
+  <main class="min-h-screen flex flex-col items-center">
     <!-- Header Section -->
-    <header class="text-center py-8">
+    <header class="text-center py-12">
       <h1 class="text-4xl font-bold text-[#101a61]">INSCRIÇÕES GERAIS</h1>
-      <h2 class="text-2xl font-bold text-[#101a61] mt-2">
+      <h2 class="text-2xl font-bold text-[#101a61] mt-4">
         XVII FESTIVAL KAWASUJI DE TAIKO
       </h2>
     </header>
 
     <!-- Main Content -->
-    <main class="flex-1 px-4 py-8 max-w-4xl mx-auto">
+    <div class="w-full max-w-4xl px-4 py-8 bg-white rounded-lg shadow-lg mb-12">
       <section class="text-center mb-8">
         <p class="text-lg text-slate-700">
           Depois de muita espera, estão finalmente abertas as inscrições gerais
@@ -49,8 +44,7 @@ import backgroundImage from "assets/Home_bg.png";
             Finalize o preenchimento dos campos restantes e envie o formulário.
           </li>
           <li>
-            Siga o Instagram Oficial:{" "}
-            <a
+            Siga o Instagram Oficial: <a
               href="https://instagram.com/festivalkawasuji"
               target="_blank"
               class="text-blue-500 underline">@festivalkawasuji</a
@@ -60,8 +54,7 @@ import backgroundImage from "assets/Home_bg.png";
             Em caso de dúvidas, entre em contato:
             <ul class="list-disc list-inside pl-6">
               <li>
-                E-mail:{" "}
-                <a
+                E-mail: <a
                   href="mailto:festival.kawasuji@gmail.com"
                   class="text-blue-500 underline">festival.kawasuji@gmail.com</a
                 >
@@ -78,7 +71,9 @@ import backgroundImage from "assets/Home_bg.png";
       </section>
 
       <!-- Calculator Section -->
-      <section id="calculator" class="bg-[#b8b394] p-6 rounded-lg shadow-md">
+      <section
+        id="calculator"
+        class="bg-[#f9f9f9] p-8 rounded-lg shadow-md mt-8">
         <h2 class="text-2xl font-bold text-[#101a61] text-center">
           Calculadora de Custos do Evento
         </h2>
@@ -151,7 +146,7 @@ import backgroundImage from "assets/Home_bg.png";
         </div>
         <button
           class="bg-[#2641c6ff] text-white py-2 px-6 rounded-full mt-6 hover:bg-[#101a61ff]"
-          onclick="calculateTotalCost()">
+          id="calculate-button">
           Calcular Total
         </button>
         <div class="mt-6 text-center">
@@ -165,43 +160,54 @@ import backgroundImage from "assets/Home_bg.png";
           </a>
         </div>
       </section>
-    </main>
+    </div>
+  </main>
 
-  </div>
+  <script is:inline>
+    document
+      .getElementById("calculate-button")
+      .addEventListener("click", () => {
+        const ufElement = document.getElementById("uf");
+        const qtdAdultsElement = document.getElementById("qtd-adults");
+        const qtdChildrenElement = document.getElementById("qtd-children");
+        const qtdTotalElement = document.getElementById("qtd-total");
+        const formLink = document.getElementById("form-link");
 
-  <script>
-    function calculateTotalCost(): void {
-      const ufElement = document.getElementById("uf") as HTMLSelectElement;
-      const qtdAdultsElement = document.getElementById("qtd-adults") as HTMLInputElement;
-      const qtdChildrenElement = document.getElementById("qtd-children") as HTMLInputElement;
-      const qtdTotalElement = document.getElementById("qtd-total") as HTMLInputElement;
-      const formLink = document.getElementById("form-link") as HTMLAnchorElement;
+        if (
+          !(ufElement instanceof HTMLSelectElement) ||
+          !(qtdAdultsElement instanceof HTMLInputElement) ||
+          !(qtdChildrenElement instanceof HTMLInputElement) ||
+          !(qtdTotalElement instanceof HTMLInputElement) ||
+          !(formLink instanceof HTMLAnchorElement)
+        ) {
+          return;
+        }
 
-      const uf = ufElement?.value || "";
-      const qtdAdults = parseInt(qtdAdultsElement?.value) || 0;
-      const qtdChildren = parseInt(qtdChildrenElement?.value) || 0;
-      const qtdTotal = parseInt(qtdTotalElement?.value) || 0;
+        const uf = ufElement?.value || "";
+        const qtdAdults = parseInt(qtdAdultsElement?.value) || 0;
+        const qtdChildren = parseInt(qtdChildrenElement?.value) || 0;
+        const qtdTotal = parseInt(qtdTotalElement?.value) || 0;
 
-      const baseCost = uf === "SP" ? 1000 : 750;
-      const foodAdultCost = 192;
-      const foodChildCost = 123;
-      const lodgingCost = 30;
+        const baseCost = uf === "SP" ? 1000 : 750;
+        const foodAdultCost = 192;
+        const foodChildCost = 123;
+        const lodgingCost = 30;
 
-      const total =
-        baseCost +
-        qtdAdults * foodAdultCost +
-        qtdChildren * foodChildCost +
-        qtdTotal * lodgingCost;
+        const total =
+          baseCost +
+          qtdAdults * foodAdultCost +
+          qtdChildren * foodChildCost +
+          qtdTotal * lodgingCost;
 
-      const resultElement = document.getElementById("result");
-      if (resultElement) {
-        resultElement.innerText = `Valor Total: R$ ${total}`;
-      }
+        const resultElement = document.getElementById("result");
+        if (resultElement) {
+          resultElement.innerText = `Valor Total: R$ ${total}`;
+        }
 
-      if (formLink) {
-        formLink.href = `https://docs.google.com/forms/d/...?uf=${uf}&adults=${qtdAdults}&children=${qtdChildren}&total=${qtdTotal}`;
-        formLink.classList.remove("hidden");
-      }
-    }
+        if (formLink) {
+          formLink.href = `https://docs.google.com/forms/d/...?uf=${uf}&adults=${qtdAdults}&children=${qtdChildren}&total=${qtdTotal}`;
+          formLink.classList.remove("hidden");
+        }
+      });
   </script>
 </Layout>
