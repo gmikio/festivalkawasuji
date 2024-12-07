@@ -204,8 +204,18 @@ import Layout from "@layouts/Layout.astro";
           resultElement.innerText = `Valor Total: R$ ${total}`;
         }
 
+        const idUF = "entry.369296670"; 
+
+        const idAlimentacao = "entry.1549837914"; 
+        const idAlimentacaoCrianca = "entry.424212885";
+
+        const idHospedagem = "entry.1083938500"; 
+
+        const formUrlBase = "https://docs.google.com/forms/d/e/1FAIpQLSfjykJCpEdSFS8YzgrZOHKo9gx0Z0WKYO4BLOKmwOynmsWKIw/viewform?usp=pp_url&";          
+        const formUrl = formUrlBase + "&" + idUF + "=" + uf + "&" + idAlimentacao + "=" + qtdAlimentacao + "&" + idAlimentacaoCrianca + "=" + qtdAlimentacaoCrianca + "&" + idHospedagem + "=" + qtdHospedagem;
+
         if (formLink) {
-          formLink.href = `https://docs.google.com/forms/d/...?uf=${uf}&adults=${qtdAdults}&children=${qtdChildren}&total=${qtdTotal}`;
+          formLink.href = formUrl;
           formLink.classList.remove("hidden");
         }
       });
