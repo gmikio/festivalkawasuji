@@ -150,7 +150,7 @@ import Layout from "@layouts/Layout.astro";
           Calcular Total
         </button>
         <div class="mt-6 text-center">
-          <p id="result" class="text-2xl font-bold text-[#2641c6ff]"></p>
+          <p id="result" class="text-2xl font-bold mb-6 text-[#2641c6ff]"></p>
           <a
             id="form-link"
             href="#"
@@ -204,8 +204,38 @@ import Layout from "@layouts/Layout.astro";
           resultElement.innerText = `Valor Total: R$ ${total}`;
         }
 
+        const idUF = "entry.369296670";
+
+        const foodEntryId = "entry.1549837914";
+        const childFoodEntryId = "entry.424212885";
+
+        const accommodationEntryId = "entry.1083938500";
+
+        const formUrlBase =
+          "https://docs.google.com/forms/d/e/1FAIpQLSfjykJCpEdSFS8YzgrZOHKo9gx0Z0WKYO4BLOKmwOynmsWKIw/viewform?usp=pp_url&"; // Substitua por sua URL base
+
+        // Crie a URL com os parâmetros pré-preenchidos
+        const formUrl =
+          formUrlBase +
+          "&" +
+          idUF +
+          "=" +
+          uf +
+          "&" +
+          foodEntryId +
+          "=" +
+          qtdAdults +
+          "&" +
+          childFoodEntryId +
+          "=" +
+          qtdChildren +
+          "&" +
+          accommodationEntryId +
+          "=" +
+          qtdTotal;
+
         if (formLink) {
-          formLink.href = `https://docs.google.com/forms/d/...?uf=${uf}&adults=${qtdAdults}&children=${qtdChildren}&total=${qtdTotal}`;
+          formLink.href = formUrl;
           formLink.classList.remove("hidden");
         }
       });
