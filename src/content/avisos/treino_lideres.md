@@ -6,7 +6,7 @@ image: {
     src: "https://images.unsplash.com/photo-1579985081815-efd0d0729c23?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "bus station"
 }
-publishDate: "2024-12-25 10:48"
+publishDate: "2024-12-25 10:47"
 category: "Publicações"
 author: "Ryu Nakamura"
 tags: [treino de líderes, avisos, comunicação]
