@@ -6,7 +6,7 @@ image: {
     src: "https://images.unsplash.com/photo-1579985081815-efd0d0729c23?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "bus station"
 }
-publishDate: "2025-12-19 21:32"
+publishDate: "2024-12-25 10:48"
 category: "Publicações"
 author: "Ryu Nakamura"
 tags: [treino de líderes, avisos, comunicação]
@@ -27,18 +27,21 @@ Para garantir propriamente o andamento do evento, leia atentamente as informaç�
 2. [Sobre os locais do evento](#sobre-os-locais-do-evento)
 3. [Sobre os translados](#sobre-os-translados)
 4. [O que levar](#o-que-levar)
-5. [Observações finais](#observações-finais)
+5. [Alimentação](#alimentação)
+6. [Observações finais](#observações-finais)
 
 <br>
 
 ### Horários e pontos de chegada
 
-| Evento                           | Dias       | Horário            | Local                   |
-|----------------------------------|------------|--------------------|-------------------------|
-| Chegada dos líderes              | 21 (terça) | 11h00 - 12h00      | Complexo Cultural Viber |
-| Treinos com Wadan Taiko Ensemble | 21 a 24    | 8h00 - 18h00       | Complexo Cultural Viber |
-| Banhos e pernoites               | 21 a 23    | A partir das 18h00 | ACENBI                  |
-| Encerramento                     | 24 (sexta) | 14h00              | Complexo Cultural Viber |
+| Evento                                      | Dia        | Horário            | Local               |
+|---------------------------------------------|------------|--------------------|---------------------|
+| Chegada dos líderes                         | 21 (terça) | 11h00 - 12h00      | Polo Cultural Viber |
+| Primeiro treino com Wadan Taiko             | 21 (terça) | 14h00              | Polo Cultural Viber |
+| Treinos com Wadan Taiko                     | 22 a 23    | 8h00 - 18h00       | Polo Cultural Viber |
+| Banhos e pernoites                          | 21 a 23    | 18h00              | ACENBI              |
+| Último treino com Wadan + Encerramento      | 24 (sexta) | 14h00              | Polo Cultural Viber |
+
 
 *Nota: O primeiro dia (21) irá se iniciar a partir do almoço; e o encerramento dos treinos (24) irá acontecer logo após o almoço.*
 
@@ -98,6 +101,15 @@ O translado entre os locais de treino e pernoite serão realizados através de t
 **4. Específicos:**
 
 *Não se esquecer de itens individuais específicos, tal como medicamentos ou itens ortopédicos.*
+
+---
+
+### Alimentação
+
+A alimentação ao longo de todos os dias de evento será feita através de marmitas fornecidas por terceiros.
+Para lidar com as restrições alimentares apontadas durante a inscrição, antes de cada refeição a organização do evento irá fornecer as opções de marmitas do dia para que os líderes escolham individualmente.
+
+(Todas as refeições já estão foram contempladas no valor pago na inscrição).
 
 ---
 
