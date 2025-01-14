@@ -7,7 +7,7 @@ image: {
     alt: "paperwork"
 }
 publishDate: "2025-01-03 22:12"
-category: "Publicações"
+category: "Avisos"
 author: "Ryu Nakamura"
 tags: [inscrições, avisos]
 ---
