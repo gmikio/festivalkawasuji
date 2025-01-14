@@ -21,16 +21,23 @@ _Flexibilização de alimentação através de pacotes!_
 Após mais pedidos realizados por grupos que irão participar do evento, a coordenação do Festival Kawasuji decidiu idealizar e implementar um modelo que servirá para **flexibilizar** a contratação da alimentação.
 - Até então, só era possível aderir a todas as refeições e todos os cafés da manhã simultaneamente. Caso se optasse não pagar por alguma refeição, o participante deveria abrir mão de todas as outras.
 - Com o novo modelo, será possível que cada participante escolham 1 dos pacotes disponíveis, detalhados abaixo:
+<br>
 
+_Obs.: Valores entre parênteses indicam valor infantil (12 anos ou menos) para alimentação._
+
+<br>
 ![pacote a table](images/pacote_a.png)
+
 **Pacote A**: destinado àqueles que estarão presentes ao longo de todo o evento tocando Taiko sem parar!
 <br>
 <br>
 ![pacote b table](images/pacote_b.png)
+
 **Pacote B**: para participantes que estarão alojados em hotéis/pousadas que já contam com café da manhã inclusos no preço.
 <br>
 <br>
 ![pacote c table](images/pacote_c.png)
+
 **Pacote C**: voltado principalmente para acompanhantes que irão aproveitar sua estadia pela cidade de Indaiatuba no sábado sem participar diretamente do Workshop.
 <br>
 <br>
