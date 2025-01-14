@@ -7,7 +7,7 @@ image: {
     alt: "food table"
 }
 publishDate: "2025-01-12 22:23"
-category: "Publicações"
+category: "Avisos"
 author: "Ryu Nakamura"
 tags: [inscrições, avisos]
 ---
@@ -26,16 +26,19 @@ Após mais pedidos realizados por grupos que irão participar do evento, a coord
 _Obs.: Valores entre parênteses indicam valor infantil (12 anos ou menos) para alimentação._
 
 <br>
+
 ![pacote a table](images/pacote_a.png)
 
 **Pacote A**: destinado àqueles que estarão presentes ao longo de todo o evento tocando Taiko sem parar!
 <br>
 <br>
+
 ![pacote b table](images/pacote_b.png)
 
 **Pacote B**: para participantes que estarão alojados em hotéis/pousadas que já contam com café da manhã inclusos no preço.
 <br>
 <br>
+
 ![pacote c table](images/pacote_c.png)
 
 **Pacote C**: voltado principalmente para acompanhantes que irão aproveitar sua estadia pela cidade de Indaiatuba no sábado sem participar diretamente do Workshop.
